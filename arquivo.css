@@ -84,11 +84,15 @@ body * {
     left: 0;
     top: 30%;
     transform: translateY(-50%);
+    animation: botão-volta 0.4s forwards;
    
     
    
     
     
+}
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 #switch span{
     display: block;
@@ -101,8 +105,8 @@ body * {
 
 }
 .light #switch button{
-    right: 0;
-    left: initial;
+   animation: botão-ida 0.4s forwards;
+   
 }
 #nome{
     font-weight: 500;
@@ -153,6 +157,7 @@ p{
    
    
 }
+/*animation*/
 
 @keyframes slidein {
     from {
@@ -166,4 +171,20 @@ p{
       width: 100%;
     }
     
+  }
+  @keyframes botão-ida{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 50%;
+    }
+  }
+  @keyframes botão-volta{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0%;
+    }
   }
