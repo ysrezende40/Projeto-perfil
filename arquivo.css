@@ -1,0 +1,169 @@
+/*
+background-repeat: no-repeat - não deixa a imagem repetir
+
+background-position: top center - centraliza a imagem
+
+background-size: cover - usa a imagem para cobrir todo espaço em branco
+
+body * - e a seleção universal ou seja tudo que estiver dentro desse body sera aplicado.
+
+
+*/
+*{
+   margin:0px;
+   padding:0px;
+   box-sizing: border-box; 
+   background: center; 
+}
+:root{
+    --text-color: white;
+    --bg-url: url(assents/Interface=Mobile\,\ Theme=Dark\ mode.jpg);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch: url(./assents/sun.svg);
+    --stroke-color: rgba(255, 255, 255, 0.5); 
+    --surface-color: rgba(255, 255, 255, 0.1);
+    
+
+    
+}
+.light{
+    --text-color: black;
+    --bg-url : url(assents/Interface=Mobile\,\ Theme=light\ mode.jpg);
+    --highlight-color: rgba(0, 0, 0, 0.5);
+    --switch: url(./assents/mon-star.svg); 
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+      
+    
+}
+
+body{
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    
+}
+#conteiner{
+    width: 360px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+    overflow:hidden
+   
+}
+#profile img{
+   width: 200px;
+   margin: auto;
+   display: block;
+   padding: 24px;
+
+}
+/*botão para alteral o modo*/
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    
+}
+
+
+ #switch button{
+    width: 32px;
+    height: 32px;
+    background-color: white;   
+    background-image: var(--switch);  
+    background-repeat:no-repeat;
+    border-radius: 50px;  
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 30%;
+    transform: translateY(-50%);
+   
+    
+   
+    
+    
+}
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid var(--stroke-color);
+    background-color: var(--surface-color);
+    text-align: center;
+
+}
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+#nome{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+
+    
+    
+}
+
+
+/*links das redes sociais*/
+#social{
+   display: flex;
+   gap: 32px;
+   padding: 24px 0;
+   font-size: 28px;
+   justify-content: center;
+ 
+}
+#social a:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--highlight-color);
+    
+    
+
+}
+#social a:hover{
+    padding: 8px;
+    border-radius: 90%;
+    transition: 0.2s;
+}
+footer{
+    padding: 24px 0;
+    text-align: center;
+}
+p{
+    text-align: justify;
+    letter-spacing: -1px;
+    animation-duration: 3s;
+    animation-name: slidein;
+   
+   
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+      
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+    
+  }
